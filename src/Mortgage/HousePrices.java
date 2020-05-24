@@ -9,15 +9,6 @@ public class HousePrices extends Users {
 
      */
 
-    public HousePrices(String username, String whichCondition, String houseType, int roomCount, int downPayment, int longTerm, StatesTax statesTax) {
-
-        super(username, whichCondition, houseType, roomCount, downPayment, longTerm, statesTax);
-    }
-
-
-
-
-    private int price;
 
 
     /*
@@ -40,35 +31,7 @@ public class HousePrices extends Users {
 
 
      */
-    public void roomCountToPrice(){
 
-        if(getRoomCount()==0  ){
-
-            price+=10000;
-
-        }else if(getRoomCount()==1  ){
-
-            price+=20000;
-
-        }if(getRoomCount()==2  ){
-
-            price+=30000;
-
-        }if(getRoomCount()==3  ){
-
-            price+=40000;
-
-        }if(getRoomCount()==4  ){
-
-            price+=50000;
-
-        }if(getRoomCount()==5  ){
-
-            price+=60000;
-
-        }
-
-    }
     /*
         Create a method name is ConditionToPrice
         no parameter
@@ -83,23 +46,7 @@ public class HousePrices extends Users {
                 add 15000 to price
 
      */
-    public void ConditionToPrice(){
 
-        if(getWhichCondition().equalsIgnoreCase("new")){
-
-            price+=50000;
-        }else if(getWhichCondition().equalsIgnoreCase("like new")){
-
-            price+=40000;
-        }else if(getWhichCondition().equalsIgnoreCase("old")){
-
-            price+=30000;
-        }else if(getWhichCondition().equalsIgnoreCase("Renew Required")){
-
-            price+=15000;
-        }
-
-    }
 
     /*
         Create a method name is houseTypeToPrice
@@ -113,47 +60,20 @@ public class HousePrices extends Users {
                 add 40000 to price
 
      */
-    public void houseTypeToPrice(){
 
-        if(getHouseType().equalsIgnoreCase("Apartment")){
-
-            price+=20000;
-        }else if(getHouseType().equalsIgnoreCase("condo")){
-
-            price+=30000;
-        }else if(getHouseType().equalsIgnoreCase("house")){
-
-            price+=40000;
-        }
-
-    }
 
     /*
         Create a method name is getPriceTotal
             Return the total price
      */
 
-    public int getPriceTotal() {
-        roomCountToPrice();
-        ConditionToPrice();
-        houseTypeToPrice();
 
-        price = price  + (price * getStatesTax().getTax()/100);
-
-        return price;
-    }
 
     /*
         Create a method name is getPriceEachMonth
             Return the monthly payment amount.
      */
 
-    public int getPriceEachMonth() {
-
-
-        return (price - getDownPayment()) / getLongTerm();
-
-    }
 
 
 }
