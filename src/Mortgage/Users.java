@@ -18,13 +18,15 @@ public class Users {
 
         Create a constructor  using all the variables.
 
-         */ 
-
+         */
 
 
     /*
-        All variables are read-only
+    Create the read-only method of the all variables
+
      */
+
+  
 
 }
 

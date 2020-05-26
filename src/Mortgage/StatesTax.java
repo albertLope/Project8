@@ -1,6 +1,7 @@
 package Mortgage;
 
-    /*
+public enum StatesTax {
+      /*
 
         Create a enum name is StatesTax
             Add Enumerated data types as
@@ -9,6 +10,17 @@ package Mortgage;
                 FLORIDA amount of the tax 5
                 OHIO amount of the tax 12
 
-           return the amount of the tax
+                create a private vairable int tax;
+                create the constructor
+
+                create a read method of the tax
+
     */
+
+
+
+
+}
+
+
 

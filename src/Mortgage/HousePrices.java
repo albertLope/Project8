@@ -1,13 +1,14 @@
 package Mortgage;
 
-public class HousePrices extends Users {
+public class HousePrices  {
 
     /*
             This class is extending the Users class
 
-            1 private int variables price
+            1 private int variable price
 
      */
+
 
 
 
@@ -27,10 +28,11 @@ public class HousePrices extends Users {
         if the roomCount in the Users class equal to 4
             add 50000 to price
         if the roomCount in the Users class equal to 5
-            add 50000 to price
+            add 60000 to price
 
 
      */
+
 
     /*
         Create a method name is ConditionToPrice
@@ -48,6 +50,8 @@ public class HousePrices extends Users {
      */
 
 
+
+
     /*
         Create a method name is houseTypeToPrice
         no parameter
@@ -62,18 +66,30 @@ public class HousePrices extends Users {
      */
 
 
+
+
     /*
-        Create a method name is getPriceTotal
-            Return the total price
+            Create a method name is getPriceTotal
+            return type is int
+            Return the total price(housetype, condition and roomcount prices)
+            Also you need to calculate the tax and add  to the price
+            For the tax percentage use the StatesTax enum
      */
+
 
 
 
     /*
         Create a method name is getPriceEachMonth
+
             Return the monthly payment amount.
+            reduce the downpayment and calculate the each month's payment
      */
 
 
 
-}
+    }
+
+
+
+
